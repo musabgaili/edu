@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            {{-- <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat mb-50">
                     <div class="cat-icon">
                         <span class="flaticon-communications"></span>
@@ -98,7 +98,7 @@
                         <h6> <b> <a  href="#">{{__("PRODUCT DESIGN")}}</a></h6> </b>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat mb-50">
                     <div class="cat-icon">
@@ -121,18 +121,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            {{-- <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat mb-50">
                     <div class="cat-icon">
                         <span class="flaticon-business"></span>
                     </div>
                     <div class="cat-cap">
                         <h6><a  href="#">{{__("HARDWARE ACCELERATOR")}}</a></h6>
-                        {{-- <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
-                        <a  href="#" class="read-more1">Read More ></a> --}}
+
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <!-- Section Button -->
         {{-- <div class="row">
