@@ -126,7 +126,7 @@
                                 <!-- Footer Social -->
                                 {{-- <div class="footer-social"> --}}
                                 <h6 style="color: white">
-                                    <a href="">edu@vujadesa.com</a>
+                                    <a href="">info@vujadesa.com</a>
                                 </h6>
                                 &nbsp;
                                 <h6 style="color: white">
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <!-- Footer Menu -->
-                    <div class="row d-flex justify-content-between">
+                    {{-- <div class="row d-flex justify-content-between">
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
@@ -195,7 +195,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <!-- Footer Bottom -->
                 <div class="footer-bottom">
@@ -209,7 +209,7 @@
                                     </script>
                                     All rights reserved | Vuja Education is <i class="fa fa-heart"
                                         aria-hidden="true"></i>
-                                    Product by <a href="https://vojadesa.com" target="_blank">VujaDe</a>
+                                    Product by <a href="https://vujadesa.com" target="_blank">VujaDe</a>
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 </p>
                             </div>
