@@ -126,11 +126,11 @@
                                 <!-- Footer Social -->
                                 {{-- <div class="footer-social"> --}}
                                 <h6 style="color: white">
-                                    <a href="">info@vujadesa.com</a>
+                                    <a href="email:info@vujadesa.com">info@vujadesa.com</a>
                                 </h6>
                                 &nbsp;
                                 <h6 style="color: white">
-                                    <a href="">+966544615194</a>
+                                    <a href="tel:+966544615194">+966544615194</a>
                                 </h6>
 
                                 {{-- </div> --}}
