@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <!--? Preloader Start -->
+    {{-- <!--? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
@@ -46,13 +46,13 @@
                 <div class="header-bottom header-sticky">
                     <!-- Logo -->
                     <div class="logo d-none d-lg-block">
-                        <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/edu.png")}}"  style="width:82px;height:32px" alt=""></a>
+                        <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/edu-t.png")}}"  style="width:160px;height:32px" alt=""></a>
                     </div>
                     <div class="container">
                         <div class="menu-wrapper">
                             <!-- Logo -->
                             <div class="logo logo2 d-block d-lg-none">
-                                <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/edu.png")}}" style="width:82px;height:32px" alt=""></a>
+                                <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/edu-t.png")}}" style="width:160px;height:32px" alt=""></a>
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-lg-block">
