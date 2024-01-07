@@ -45,7 +45,7 @@
 
                 <div class="header-bottom header-sticky">
                     <!-- Logo -->
-                    <div class="logo d-none d-lg-block">
+                    <div class="logo d-none d-lg-block" style="background-color:white;">
                         <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/edu-t.png")}}"  style="width:160px;height:32px" alt=""></a>
                     </div>
                     <div class="container">
