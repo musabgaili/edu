@@ -231,7 +231,7 @@
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
                                
-                                    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                
                                     <svg width="71" height="71" viewBox="0 0 64 64"
                                         xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#CD6E10"
                                         fill="none">
