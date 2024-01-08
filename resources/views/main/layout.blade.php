@@ -46,13 +46,13 @@
                 <div class="header-bottom header-sticky">
                     <!-- Logo -->
                     <div class="logo d-none d-lg-block" style="background-color:white;">
-                        <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/edu-t.png")}}"  style="width:160px;height:32px" alt=""></a>
+                        <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/log1.png")}}"  style="width:80px;height:80px" alt=""></a>
                     </div>
                     <div class="container">
                         <div class="menu-wrapper">
                             <!-- Logo -->
                             <div class="logo logo2 d-block d-lg-none">
-                                <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/edu-t.png")}}" style="width:160px;height:32px" alt=""></a>
+                                <a href="{{route('home')}}"><img src="{{asset("assets/img/logo/log1.png")}}" style="width:60px;height:60px" alt=""></a>
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-lg-block">
