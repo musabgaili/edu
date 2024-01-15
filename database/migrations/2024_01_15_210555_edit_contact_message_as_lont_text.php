@@ -11,17 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->id();
-
-            $table->boolean('published')->default(true);
-            $table->string('name');
-            $table->longText('content');
-            $table->string('thumbnail');
-
-            
-
-            $table->timestamps();
+        Schema::table("contacts", function (Blueprint $table) { 
+            $table->longText("message")->change();
         });
     }
 
@@ -30,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        //
     }
 };

@@ -3,18 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Course;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
 
     function home()
     {
-
+        $courses = Course::where(['published'=>true , 'home_screen'=> true])->get();
         $services = Service::where('published',true)->get();
-        return view('main.home',compact('services'));
+        // return $courses;
+        // $html = Str::markdown($courses->last()->content);
+        // return $html;
+        $html = Str::markdown($courses->last()->content);
+
+        return view('main.home',compact('courses','services'));
     }
     function about()
     {

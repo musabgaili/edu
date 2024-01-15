@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('contents', function (Blueprint $table) {
             $table->id();
-
-            $table->boolean('published')->default(true);
+            // header , second header , home title , etc 
             $table->string('name');
+            // multi locale content 
             $table->longText('content');
-            $table->string('thumbnail');
 
+          
             
-
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('contents');
     }
 };

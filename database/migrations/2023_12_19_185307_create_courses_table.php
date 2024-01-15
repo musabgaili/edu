@@ -15,9 +15,20 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('price')->nullable();
-            $table->string('location')->nullable();
+            $table->string('content');
+            // $table->string('price')->nullable();
+            // $table->string('location')->nullable();
+            $table->string('agenda');
+            // Duration By Weeks
+            $table->string('duration');
             $table->string('thumbnail');
+
+            $table->boolean('published')->default(true);
+            // show course in home Screen??
+            $table->boolean('home_screen')->default(false);
+
+            
+
 
             $table->timestamps();
         });
