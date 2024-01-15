@@ -16,10 +16,7 @@ class HomeController extends Controller
     {
         $courses = Course::where(['published'=>true , 'home_screen'=> true])->get();
         $services = Service::where('published',true)->get();
-        // return $courses;
-        // $html = Str::markdown($courses->last()->content);
-        // return $html;
-        $html = Str::markdown($courses->last()->content);
+    
 
         return view('main.home',compact('courses','services'));
     }
