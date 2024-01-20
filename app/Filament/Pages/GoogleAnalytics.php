@@ -6,7 +6,7 @@ use Filament\Pages\Page;
 use BezhanSalleh\FilamentGoogleAnalytics\Widgets;
 class GoogleAnalytics extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-chart-bar-square';
 
     protected static string $view = 'filament.pages.google-analytics';
 

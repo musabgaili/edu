@@ -12,11 +12,11 @@ return [
      * Widgets
      */
     'page_views' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => true,
     ],
     'visitors' => [
-        'filament_dashboard' => false,
+        'filament_dashboard' => true,
         'global' => true,
     ],
 

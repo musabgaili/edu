@@ -6,6 +6,7 @@ use App\Filament\Resources\ContactResource\Pages;
 use App\Filament\Resources\ContactResource\RelationManagers;
 use App\Models\Contact;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -26,10 +27,16 @@ class ContactResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('email')->disabled(),
-                TextInput::make('phone')->disabled(),
-                TextInput::make('name')->disabled(),
-                Textarea::make('message')->disabled()->rows(10),
+                Section::make('Contact Deatils')->schema([
+                    TextInput::make('email')->disabled(),
+                    TextInput::make('phone')->disabled(),
+                    TextInput::make('name')->disabled(),
+                ])->columnSpan(1),
+                Section::make('Message')->schema([
+                    Textarea::make('message')->disabled()->rows(10),
+                    TextInput::make('created_at'),
+                ])->columnSpan(1),
+
             ]);
     }
 
@@ -37,10 +44,11 @@ class ContactResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('email')->disabled(),
-                TextColumn::make('phone')->disabled(),
-                TextColumn::make('name')->disabled(),
-                TextColumn::make('message')->disabled()->limit(50),
+                TextColumn::make('email')->searchable(),
+                TextColumn::make('phone')->searchable(),
+                TextColumn::make('name')->searchable(),
+                TextColumn::make('message')->limit(50),
+                TextColumn::make('created_at')->dateTime()->sortable(),
             ])
             ->filters([
                 //

@@ -9,5 +9,14 @@ class Blog extends Model
 {
     use HasFactory;
 
-protected $guarded = ['id'];
+    protected $guarded = ['id'];
+
+    
+    protected $casts =[
+        'content'=> 'json',
+        'title'=>'json'
+    ];
+
+    protected $translatable = [ 'title', 'content',];
+    
 }

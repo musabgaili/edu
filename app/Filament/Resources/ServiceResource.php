@@ -43,11 +43,11 @@ class ServiceResource extends Resource
                             ->maxLength(255)
                             ->required()
                     ),
-                    TranslatableContainer::make(
-                        Forms\Components\TextInput::make('agenda')
-                            ->maxLength(255)
-                            ->required()
-                    ),
+                    // TranslatableContainer::make(
+                    //     Forms\Components\TextInput::make('agenda')
+                    //         ->maxLength(255)
+                    //         ->required()
+                    // ),
                 ])->columnSpan(1),
                 Section::make('Control Data')->schema([
                     FileUpload::make('thumbnail')->directory('courses')->columnSpanFull(),

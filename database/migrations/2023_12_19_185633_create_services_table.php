@@ -17,10 +17,9 @@ return new class extends Migration
             $table->boolean('published')->default(true);
             $table->string('name');
             $table->longText('content');
-            $table->string('thumbnail');
+            $table->string('thumbnail')->nullable();
 
-            
-
+        
             $table->timestamps();
         });
     }
