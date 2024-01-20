@@ -50,8 +50,8 @@
                     <span class="oi oi-menu"></span>
                 </button>
                 <div class="col-md-4 d-flex align-items-center logo">
-                    <a class="navbar-brand" href="index.html" style="width: 170px; height: 170px"><img
-                            src="images/logo-new.jpg" alt="" style="width : 192px;height : 192px" /></a>
+                    <a class="navbar-brand" href="{{route('home')}}" style="width: 170px; height: 170px"><img
+                            src="{{asset('logo-new.jpg')}}" alt="" style="width : 192px;height : 192px" /></a>
                 </div>
                 <div class="col-lg-8 d-block"></div>
             </div>
@@ -261,7 +261,7 @@
     <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.animateNumber.min.js') }}"></script>
     <script src="{{ asset('assets/js/scrollax.min.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> --}}
     <script src="{{ asset('assets/js/google-map.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>

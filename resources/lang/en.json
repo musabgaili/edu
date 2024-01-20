@@ -31,11 +31,14 @@
 
     "What We Offer": "",
 
-    "Home": "الرئيسية",
-    "About": "من نحن",
-    "Contact": "تواصل معنا",
-    "Courses": "الدورات",
+    "Home": "",
+    "About": "",
+    "Contact": "",
+    "Courses": "",
     "En": "English",
-    "Ar": "العربية"
+    "Ar": "العربية",
+    "Blog": "",
+    "Staff": "",
+    "About Us": "من نحن"
 
 }
