@@ -16,5 +16,5 @@ class Course extends Model
         'name'=> 'json',
     ];
 
-    protected $translatable = ['name','content','agenda'];
+    protected $translatable = ['name','content','agenda','thumbnail'];
 }

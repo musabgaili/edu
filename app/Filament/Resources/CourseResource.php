@@ -51,7 +51,9 @@ class CourseResource extends Resource
                     ),
                 ])->columnSpan(1),
                 Section::make('Control Data')->schema([
+                    TranslatableContainer::make(
                     FileUpload::make('thumbnail')->directory('courses')->columnSpanFull(),
+                    ),
                     TextInput::make('duration')->label("Duration , By Weeks")->required()->type("number")->columnSpanFull(),
                     Toggle::make('published')->default(true)->required(),
                     Toggle::make('home_screen')->default(false)->required(),
@@ -65,7 +67,7 @@ class CourseResource extends Resource
             ->columns([
                 // FileUpload::make('thumbnail'),
                 TextColumn::make('name'),
-                TextColumn::make('content'),
+                TextColumn::make('content')->limit(20),
                 TextColumn::make('agenda'),
                 TextColumn::make('duration'),
                 // Toggle::make('published')->default(true),
