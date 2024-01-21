@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('courses', function (Blueprint $table) {
-            $table->string('slug')->after('name')->unique()->nullable(false);
+            // $table->string('slug')->after('name')->unique()->nullable(false);
         });
     }
 
@@ -21,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('courses_slugs');
+        Schema::dropIfExists('courses');
     }
 };
