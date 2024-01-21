@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use BezhanSalleh\FilamentGoogleAnalytics\FilamentGoogleAnalyticsPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -56,6 +57,10 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugin(SpatieLaravelTranslatablePlugin::make()
-                ->defaultLocales(['en', 'ar']),);
+                ->defaultLocales(['en', 'ar']),)
+            ->plugins([
+                \FilipFonal\FilamentLogManager\FilamentLogManager::make(),
+                // FilamentGoogleAnalyticsPlugin::make()
+            ]);
     }
 }
