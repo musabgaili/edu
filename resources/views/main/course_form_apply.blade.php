@@ -6,9 +6,9 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <h1 class="mb-2 bread">{{__("Contact")}}</h1>
+                    <h1 class="mb-2 bread">{{ __('Apply') }} | {{ $course->name }}</h1>
                     <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">{{ __('Home') }} <i
-                                    class="ion-ios-arrow-forward"></i></a></span> <span>{{ __('Contact') }} <i
+                                    class="ion-ios-arrow-forward"></i></a></span> <span>{{ __('Apply') }} <i
                                 class="ion-ios-arrow-forward"></i></span></p>
                 </div>
             </div>
@@ -45,21 +45,24 @@
 
     <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
         <div class="container">
-            <div class="row d-flex align-items-stretch no-gutters">
-                <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-                    <form action="{{ route('contact.store') }}" method="POST">
+            <div class="row d-flex align-items-stretch no-gutters align-items-center justify-content-center">
+                <div class="col-md-8 p-4 p-md-5 order-md-last bg-light">
+                    <form action="{{ route('courses.apply.save',['course'=> $course]) }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <input type="text"  required name="name" class="form-control" placeholder="{{ __('Your Name') }}">
+                            <input type="text" required name="name" class="form-control"
+                                placeholder="{{ __('Your Name') }}">
                         </div>
                         <div class="form-group">
-                            <input type="email"  required name="email" class="form-control" placeholder="{{ __('Email') }}">
+                            <input type="email" required name="email" class="form-control"
+                                placeholder="{{ __('Email') }}">
                         </div>
                         <div class="form-group">
-                            <input type="phone" required name="phone" class="form-control" placeholder="{{ __('Phone') }}">
+                            <input type="phone" required name="phone" class="form-control"
+                                placeholder="{{ __('Phone') }}">
                         </div>
                         <div class="form-group">
-                            <textarea  required name="message" id="" cols="30" rows="7" class="form-control"
+                            <textarea required name="message" id="" cols="30" rows="7" class="form-control"
                                 placeholder="{{ __('Message') }}"></textarea>
                         </div>
                         <div class="form-group">
@@ -68,17 +71,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6 d-flex align-items-stretch">
-                    {{-- <div id="map"></div> --}}
-                    {{-- <iframe width="555" height="590"
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=46.725888848304756%2C24.83323640912404%2C46.73090994358063%2C24.836527398236605&amp;layer=mapnik"
-                        style="border: 1px solid black"></iframe><br /><small> --}}
-                        {{-- <a
-                            href="https://www.openstreetmap.org/#map=18/24.83488/46.72840">View Larger Map</a></small> --}}
-                            <iframe width="555" height="590"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=46.72356605529785%2C24.836439769482713%2C46.74365043640137%2C24.849602860287867&amp;layer=mapnik"
-                            style="border: 1px solid black"></iframe><br /><small>
-                                </div>
+            
             </div>
         </div>
     </section>

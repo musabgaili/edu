@@ -65,7 +65,9 @@ class HomeController extends Controller
     function courses()
     {
 
-        return view('main.courses');
+        $courses = Course::where('published' ,true,)->get();
+
+        return view('main.courses', compact('courses'));
     }
 
     function blog()

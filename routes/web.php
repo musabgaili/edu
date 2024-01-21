@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
+use App\Models\Course;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
@@ -23,20 +25,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 Route::get('/x', function () {
-
-
-    //    return Analytics::fetchMostVisitedPages(Period::days(7));
-    // Service::create([
-    //     'name' => 'Service',
-    //     'content' => 'content',
-    //     'thumbnail' => 'thumbnail',
-    // ]);
-
-    // return Service::all();
-
-    Schema::table('courses', function (Blueprint $table) {
-        $table->longText('content')->change();
-    });
+ 
 })->name('welcome');
 
 
@@ -49,6 +38,14 @@ Route::post('/contact', [HomeController::class, 'store'])->name('contact.store')
 Route::post('/quote', [HomeController::class, 'quote'])->name('quote.store');
 
 Route::get('/courses', [HomeController::class, 'courses'])->name('courses');
+Route::post('/courses', [CourseController::class, 'search'])->name('courses.search');
+Route::get('/courses/apply/{course}', [CourseController::class, 'applyToCourseForm'])->name('courses.apply');
+Route::post('/courses/apply/{course}', [CourseController::class, 'applyToCourse'])->name('courses.apply.save');
+
+
+
+
+
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 
 

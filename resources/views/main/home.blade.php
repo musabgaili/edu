@@ -192,6 +192,7 @@
     </div>
 </section>
 
+{{-- Courses Section Content --}}
 <section class="ftco-section">
     <div class="container px-4 courses-section">
         <div class="row justify-content-center mb-5 pb-2">
@@ -207,13 +208,13 @@
                     <div class="text pt-4">
                         <p class="meta d-flex">
                             {{-- <span><i class="icon-table mr-2"></i>{{$course->thumbnail}}</span> --}}
-                            <span><i class="icon-calendar mr-2"></i>{{$course->duration}}  {{__("Weeks")}}</span>
+                            <span><i class="icon-calendar mr-2"></i>{{$course->duration}}  {{__($course->duration_type)}}</span>
                         </p>
                         <h3><a href="#">{{$course->name}}</a></h3>
                         <p>
                           {{$course->content}}
                         </p>
-                        <p><a href="#" class="btn btn-primary">{{__("Register")}}</a></p>
+                        <p><a href="{{route('courses.apply',['course'=> $course])}}" class="btn btn-primary">{{ __('Apply') }}</a></p>
                     </div>
                 </div>
             @endforeach
