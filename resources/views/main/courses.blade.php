@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url({{asset("assets/images/bg_1.jpg")}});">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -15,8 +15,6 @@
             </div>
         </div>
     </section>
-
-
 
     {{-- Courses Section Content --}}
     <section class="ftco-section">
