@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row d-flex">
                 <div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-                    <div class="img" style="background-image: url({{asset("images/about.jpg")}}); border"></div>
+                    <div class="img" style="background-image: url({{asset("assets/images/about.jpg")}}); border"></div>
                 </div>
                 <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
                     {!! Str::inlineMarkdown($content->content) !!}
