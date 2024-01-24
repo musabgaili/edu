@@ -50,7 +50,7 @@ class ServiceResource extends Resource
                     // ),
                 ])->columnSpan(1),
                 Section::make('Control Data')->schema([
-                    FileUpload::make('thumbnail')->directory('courses')->columnSpanFull(),
+                    FileUpload::make('thumbnail')->directory('services')->columnSpanFull(),
                     
                     Toggle::make('published')->default(true)->required(),
                     

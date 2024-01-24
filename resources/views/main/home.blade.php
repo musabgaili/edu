@@ -7,7 +7,7 @@
 <section class="home-slider owl-carousel">
 
     {{-- {{ $slider_content = $content->where('name', 'slider-photo') }} --}}
-    <div class="slider-item" style="background-image: url({{ asset('assets/images/bg_2.jpg') }})">
+    <div class="slider-item" style="background-image: url({{ asset('assets/images/bg_1.jpg') }})">
         <div class="overlay"></div>
         <div class="container landing-section">
             <div class="row no-gutters slider-text align-items-center justify-content-start"
@@ -42,7 +42,8 @@
                     class="col-md-6 mb-3 d-flex services align-self-stretch py-5 px-4 ftco-animate darken justify-content-center align-items-center">
                     <div class="media block-6 d-block text-center">
                         <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="flaticon-teacher"></span>
+                            {{-- <span class="flaticon-teacher"></span> --}}
+                            <img src="{{ asset('storage/'.$service->thumbnail) }}" alt="" style="height:60px ; width:75px; color:white;">
                         </div>
                         <div class="media-body p-2 mt-3">
                             <h3 class="heading">{{ $service->name }}</h3>
