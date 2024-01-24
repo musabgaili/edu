@@ -129,7 +129,7 @@
         <div class="row justify-content-center mb-5 pb-2 d-flex">
             <div class="col-md-6 align-items-stretch d-flex">
                 <div class="img img-video d-flex align-items-center"
-                    style="background-image: url({{asset("fab_academy.png")}});  background-size: 560px; width: 1000px; height: 560px;">
+                    style="background-image: url({{asset("fab_academy.png")}});  background-size: 420px; width: 1000px; height: 560px;">
                     <div class="justify-content-center">
                         {{-- <a href="https://vimeo.com/45830194" --}}
                         <a href="{{asset("fab_academy.png")}}"
@@ -139,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
+            <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-2">
                 <h2 class="mb-4">{{ __('Fab Academy') }}</h2>
                 <p>
                     {{ $content->where('name', 'fab-lab')->first()->content }}
