@@ -94,7 +94,7 @@
                             <div class="text pl-3">
                                 <h3>{{__("Certified Teachers")}}</h3>
                                 <p>
-                                   {{__("Our teachers are accredited and an awesome at their fileds")}}
+                                   {{__("Our teachers are accredited and an awesome at their fields")}}
                                 </p>
                             </div>
                         </div>
@@ -108,12 +108,30 @@
                             <div class="text pl-3">
                                 <h3>{{__("Scientifically qualified teams")}}</h3>
                                 <p>
-                                   {{__("Our teams and mentors are qualified , as well as you'll be ")}}
+                                   {{__("Our teams and mentors are qualified , as well as you'll be")}}
                                 </p>
                             </div>
                         </div>
                     </div>
 
+
+                    <div class="col-lg-6">
+                        <div class="services-2 d-flex">
+                            <div class="icon mt-2 d-flex justify-content-center align-items-center">
+                                <span class="flaticon-teacher"></span>
+                            </div>
+                            <div class="text pl-3">
+                                <h3>{{__("Passionate Instructors, Proven Results")}}</h3>
+                                <p>
+                                   {{__("Our instructors are not just educators; they are passionate individuals dedicated to fostering a love for learning")}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    {{-- Passionate Instructors, Proven Results:
+Our instructors are not just educators; they are passionate individuals dedicated to fostering a love for learning. Experience the difference that passion makes in achieving remarkable educational outcomes. --}}
                 </div>
             </div>
         </div>

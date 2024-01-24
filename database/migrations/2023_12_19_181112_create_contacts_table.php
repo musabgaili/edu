@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('name');
+            // message column changed to long text in other migration
             $table->string('message');
 
             $table->timestamps();
