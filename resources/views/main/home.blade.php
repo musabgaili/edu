@@ -64,8 +64,9 @@
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-                <div class="img" style="background-image: url(images/about.jpg); border"></div>
+                <div class="img" style="background-image: url({{asset("assets/images/about.jpg")}}); border"></div>
             </div>
+            
             <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
                 <h2 class="mb-4">{{ __('What We Offer') }}</h2>
                 <p>
@@ -148,16 +149,15 @@ Our instructors are not just educators; they are passionate individuals dedicate
         <div class="row justify-content-center mb-5 pb-2 d-flex">
             <div class="col-md-6 align-items-stretch d-flex">
                 <div class="img img-video d-flex align-items-center"
-                    style="background-image: url({{asset("fab_academy.png")}});  background-size: 420px; width: 1000px; height: 560px;">
-                    <div class="justify-content-center">
-                        {{-- <a href="https://vimeo.com/45830194" --}}
-                        <a href="{{asset("fab_academy.png")}}"
-                            class="popup-vimeo d-flex justify-content-center align-items-center">
-                            <span class="ion-ios-play"></span>
-                        </a>
-                    </div>
+                  style="background-image: url({{asset("fab_academy.png")}}) ; background-size: 420px; width: 1000px; height: 560px;">
+                  <div class="video justify-content-center">
+                    <a href="https://youtube.com/dsJrK1R3rWI"
+                      class="icon-video popup-youtube d-flex justify-content-center align-items-center">
+                      <span class="ion-ios-play"></span>
+                    </a>
+                  </div>
                 </div>
-            </div>
+              </div>
             <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-2">
                 <h2 class="mb-4">{{ __('Fab Academy') }}</h2>
                 <p>
