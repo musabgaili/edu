@@ -22,9 +22,9 @@
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
                     <h2 class="mb-4">{{ __('Our Courses') }}</h2>
-                    <p>
+                    {{-- <p>
                         محتوى الدورات
-                    </p>
+                    </p> --}}
 
                 </div>
             </div>
@@ -39,7 +39,7 @@
                                     {{ __($course->duration_type) }}</span>
                             </p>
                             <h3><a href="#">{{ $course->name }}</a></h3>
-                            <p>
+                            <p class="courses-p">
                                 {{ $course->content }}
                             </p>
                             <p><a href="{{route('courses.apply',['course'=> $course->slug])}}" class="btn btn-primary">{{ __('Apply') }}</a></p>

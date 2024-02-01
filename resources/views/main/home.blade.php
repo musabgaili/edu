@@ -219,7 +219,7 @@ Our instructors are not just educators; they are passionate individuals dedicate
                                     {{ __($course->duration_type) }}</span>
                             </p>
                             <h3><a href="#">{{ $course->name }}</a></h3>
-                            <p>
+                            <p class="courses-p">
                                 {{ $course->content }}
                             </p>
                             <p><a href="{{ route('courses.apply', ['course' => $course]) }}"

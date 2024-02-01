@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -103,7 +103,7 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
-p {
+p:not(.comment) {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -12090,14 +12090,25 @@ textarea.form-control {
 .heading-section.heading-section-black h2 {
   color: #000000;
 }
+/* Our Code */
 
 .hotel-img,
-.img,
+.img:not(.video),
 .blog-img,
 .user-img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.video {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .video {
+    background-position: top center;
+  }
 }
 
 .testimony-section {
@@ -12946,18 +12957,51 @@ textarea.form-control {
     max-width: 1140px;
   }
 }
-  @media (max-width: 767px) {
-    .header-section > .row {
-      position: relative;
-      top: -7px;
-    }
+@media (max-width: 767px) {
+  .header-section > .row {
+    position: relative;
+    top: -7px;
   }
+}
 
 @media (min-width: 768px) {
   .details {
     margin-right: 0 !important;
   }
 }
-.uni{
-    height: 200px;
+.uni {
+  height: 200px;
+}
+/* start adjust margins in contact page */
+@media ((min-width: 768px) and (max-width : 1199px)) {
+  .adjust-margin {
+    margin-top: 3.5rem;
+  }
+}
+.icon span {
+  margin-top: -30px;
+}
+p.comment {
+  margin-bottom: -2rem;
+}
+@media (max-width: 767px) {
+  p.comment {
+    margin-bottom: -4rem;
+  }
+}
+@media (min-width: 768px) {
+  .courses-p {
+    height: 200px !important;
+  }
+}
+@media (min-width: 992px) {
+  .courses-p {
+    height: 145px !important;
+  }
+}
+@media (max-width: 767px) {
+  .fab-note {
+    position: relative;
+    top: -100px ;
+  }
 }
