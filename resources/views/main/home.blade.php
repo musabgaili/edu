@@ -142,7 +142,8 @@ Our instructors are not just educators; they are passionate individuals dedicate
 
     {{-- Fab Academy Content --}}
     <section class="ftco-section ftco-counter img" id="section-counter"
-        style="background-image: url({{ asset('images/bg_3.jpg') }}) ; padding-bottom: 0px; padding-top: 20px;" data-stellar-background-ratio="0.5">
+        style="background-image: url({{ asset('images/bg_3.jpg') }}) ; padding-bottom: 0px; padding-top: 20px;"
+        data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row justify-content-center mb-2 pb-1 d-flex">
                 <div class="col-md-6  d-flex">
@@ -222,8 +223,15 @@ Our instructors are not just educators; they are passionate individuals dedicate
                             <p class="courses-p">
                                 {{ $course->content }}
                             </p>
-                            <p><a href="{{ route('courses.apply', ['course' => $course]) }}"
-                                    class="btn btn-primary">{{ __('Apply') }}</a></p>
+                            <p>
+                                <a
+                                    href="{{ route('courses.apply', ['course' => $course]) }}"class="btn btn-primary">{{ __('Apply') }}</a>
+                                @if ($course->blog_id)
+                                <a
+                                href="{{ route('blog.view', ['blog' => $course->blog]) }}"class="btn btn-danger">{{ __('View More') }}</a>
+                                @endif
+
+                            </p>
                         </div>
                     </div>
                 @endforeach

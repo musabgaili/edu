@@ -47,6 +47,7 @@ Route::post('/courses/apply/{course}', [CourseController::class, 'applyToCourse'
 
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog/{blog}', [HomeController::class, 'blogPost'])->name('blog.view');
 
 
 

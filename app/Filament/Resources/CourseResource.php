@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CourseResource\Pages;
 use App\Filament\Resources\CourseResource\RelationManagers;
 use App\Filament\Resources\CourseResource\RelationManagers\ApplicationsRelationManager;
+use App\Models\Blog;
 use App\Models\Course;
 use Closure;
 use Filament\Forms;
@@ -39,6 +40,10 @@ class CourseResource extends Resource
         return $form
             ->schema([
                 Section::make('Basic Data')->schema([
+                    Select::make('blog_id')->label('Blog , leave empty if not related to a blog post')
+                        ->options(Blog::all()->pluck('title', 'id')),
+
+
                     TextInput::make('slug')
                         ->required()
                         ->maxLength(255)
@@ -54,7 +59,7 @@ class CourseResource extends Resource
                             if ($context === 'edit') {
                                 return;
                             }
-                            $set('slug', Str::slug($state['en'] . '-'. Str::random(6)));
+                            $set('slug', Str::slug($state['en'] . '-' . Str::random(6)));
                         }),
                     TranslatableContainer::make(
                         Forms\Components\TextInput::make('content')
@@ -85,6 +90,8 @@ class CourseResource extends Resource
                     ])->columns(1),
                     Toggle::make('published')->default(true)->required(),
                     Toggle::make('home_screen')->default(false)->required(),
+                    Toggle::make('has_view')->label('Only Can have View if related to A blog')->default(false)->required(),
+
                 ])->columnSpan(1)->columns(2),
             ])->columns(2);
     }

@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Spatie\Translatable\HasTranslations;
 
 class Course extends Model
@@ -34,5 +36,21 @@ class Course extends Model
     public function applications(): HasMany
     {
         return $this->hasMany(CourseApplication::class);
+    }
+
+    // /**
+    //  * Get the post associated with the Course
+    //  *
+    //  * @return \Illuminate\Database\Eloquent\Relations\HasOne
+    //  */
+    // public function blog(): HasOne
+    // {
+    //     return $this->hasOne(Blog::class,);
+    // }
+
+
+    
+    public function blog(): BelongsTo {
+        return $this->belongsTo(Blog::class,'blog_id');   
     }
 }

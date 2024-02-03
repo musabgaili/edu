@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Content;
 use App\Models\Course;
@@ -74,6 +75,16 @@ class HomeController extends Controller
     {
         return 'blog';
     }
+
+
+
+
+    function blogPost(Blog $blog )  {
+        // return $blog;
+        return view('main.blog', compact('blog'));
+        
+    }
+
 
 
     function quote(Request $request)
