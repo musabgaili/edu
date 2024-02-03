@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <section class="hero-wrap hero-wrap-2" style="background-image: url({{asset("assets/images/bg_1.jpg")}});">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url({{ asset('assets/images/bg_1.jpg') }});">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -31,7 +31,8 @@
             <div class="row">
                 @foreach ($courses as $course)
                     <div class="col-md-6 course ftco-animate">
-                        <div class="img" style="background-image: url({{ asset('storage/' . $course->thumbnail) }})"></div>
+                        <div class="img" style="background-image: url({{ asset('storage/' . $course->thumbnail) }})">
+                        </div>
                         <div class="text pt-4">
                             <p class="meta d-flex">
                                 {{-- <span><i class="icon-table mr-2"></i>{{$course->thumbnail}}</span> --}}
@@ -42,13 +43,18 @@
                             <p class="courses-p">
                                 {{ $course->content }}
                             </p>
-                            <p><a href="{{route('courses.apply',['course'=> $course->slug])}}" class="btn btn-primary">{{ __('Apply') }}</a></p>
+                            <p>
+                                <a href="{{ route('courses.apply', ['course' => $course->slug]) }}"
+                                    class="btn btn-primary">{{ __('Apply') }}</a>
+                                @if ($course->blog_id)
+                                    <a
+                                        href="{{ route('blog.view', ['blog' => $course->blog]) }}"class="btn btn-danger">{{ __('View More') }}</a>
+                                @endif
+                            </p>
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
-
-
 @endsection
