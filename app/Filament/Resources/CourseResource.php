@@ -24,6 +24,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Mvenghaus\FilamentPluginTranslatableInline\Forms\Components\TranslatableContainer;
 use Illuminate\Support\Str;
@@ -113,6 +114,12 @@ class CourseResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ReplicateAction::make()
+                ->excludeAttributes(['slug'])
+                ->beforeReplicaSaved(function (Model $replica): void {
+                    $replica->slug = Str::slug($replica->name .  Str::random(5));
+                    logger( 'shit is '. $replica);
+                })
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
