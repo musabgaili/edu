@@ -29,7 +29,7 @@
                 <div class="col-md-4 d-flex">
                     <div class="bg-light align-self-stretch box p-4 text-center">
                         <h3 class="mb-4">{{ __('Contact Number') }}</h3>
-                        <p><a href="tel://+966544615194">+966544615194</a></p>
+                        <p><a href="tel://+966567216180">+966567216180</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex">

@@ -29,7 +29,7 @@
                 <div class="col-md-4 d-flex">
                     <div class="bg-light align-self-stretch box p-4 text-center">
                         <h3 class="mb-4">{{ __('Contact Number') }}</h3>
-                        <p><a href="tel://+966544615194">+966544615194</a></p>
+                        <p><a href="tel://+966567216180">+966567216180</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex">
@@ -60,6 +60,14 @@
                         <div class="form-group">
                             <input type="phone" required name="phone" class="form-control"
                                 placeholder="{{ __('Phone') }}">
+                        </div>
+                        <div class="form-group">
+
+                            <select name="type" id="" class="form-control">
+                                <option value="student"> {{__("Student")}}</option>
+                                <option value="parent"> {{__("Parent")}}</option>
+                                <option value="manager"> {{__("Manager")}}</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <textarea required name="message" id="" cols="30" rows="7" class="form-control"

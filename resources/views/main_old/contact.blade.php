@@ -78,7 +78,7 @@
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                         <div class="media-body">
-                            <h3>+966544615194</h3>
+                            <h3>+966567216180</h3>
                             {{-- <p>Mon to Fri 9am to 6pm</p> --}}
                         </div>
                     </div>

@@ -122,7 +122,7 @@
                                 </li>
                                 <li>
                                     <a href="#"><span class="icon icon-phone"></span><span
-                                            class="text">+966544615194</span></a>
+                                            class="text">+966567216180</span></a>
                                 </li>
                                 <li>
                                     <a href="#"><span class="icon icon-envelope"></span><span
