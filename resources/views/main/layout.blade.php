@@ -50,8 +50,9 @@
                     <span class="oi oi-menu"></span>
                 </button>
                 <div class="col-md-4 d-flex align-items-center logo">
-                    <a class="navbar-brand" href="{{route('home')}}" style="width: 170px; height: 170px"><img
-                            src="{{asset('logo-new.jpg')}}" alt="" style="width : 192px;height : 192px" /></a>
+                    <a class="navbar-brand" href="{{ route('home') }}" style="width: 170px; height: 170px"><img
+                            src="{{ asset('logo-new.jpg') }}" alt=""
+                            style="width : 192px;height : 192px" /></a>
                 </div>
                 <div class="col-lg-8 d-block"></div>
             </div>
@@ -59,10 +60,10 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container d-flex align-items-center px-4">
-            <form action="{{route('courses.search')}}" method="POST" class="searchform order-lg-last">
+            <form action="{{ route('courses.search') }}" method="POST" class="searchform order-lg-last">
                 @csrf
                 <div class="form-group d-flex">
-                    <input type="text"  name="search" class="form-control pl-3" placeholder="{{__("Search")}}" />
+                    <input type="text" name="search" class="form-control pl-3" placeholder="{{ __('Search') }}" />
                     <button type="submit" placeholder="" class="form-control search">
                         <span class="ion-ios-search"></span>
                     </button>
@@ -90,9 +91,11 @@
                     </li>
                     <li class="nav-item">
                         @if (App::getLocale() == 'en')
-                            <a href="{{ route('locale', ['locale' => 'ar']) }}" class="nav-link">{{ __('Ar') }}</a>
+                            <a href="{{ route('locale', ['locale' => 'ar']) }}"
+                                class="nav-link">{{ __('Ar') }}</a>
                         @else
-                            <a href="{{ route('locale', ['locale' => 'en']) }}" class="nav-link">{{ __('En') }}</a>
+                            <a href="{{ route('locale', ['locale' => 'en']) }}"
+                                class="nav-link">{{ __('En') }}</a>
                         @endif
                     </li>
                 </ul>
@@ -177,7 +180,7 @@
                 </div> --}}
                 <div class="col-md-6 col-lg-4">
                     <div class="ftco-footer-widget mb-5 ml-md-4">
-                        <h2 class="ftco-heading-2">{{__("Links")}}</h2>
+                        <h2 class="ftco-heading-2">{{ __('Links') }}</h2>
                         <ul class="list-unstyled">
                             <li>
                                 <a href="{{ route('home') }}"><span
@@ -207,16 +210,25 @@
                         </form>
                     </div> --}}
                     <div class="ftco-footer-widget mb-5">
-                        <h2 class="ftco-heading-2 mb-0">{{__("Connect with Us")}}</h2>
+                        <h2 class="ftco-heading-2 mb-0">{{ __('Connect with Us') }}</h2>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                             <li class="ftco-animate">
-                                <a href="#"><span class="icon-twitter"></span></a>
+                                <a href="https://x.com/vujade_edu">
+                                    {{-- <span class="icon-twitter"></span> --}}
+                                    <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+                                    text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                                    width="40px" height="40px"
+                                    clip-rule="evenodd" viewBox="0 0 512 462.799">
+                                    <path fill-rule="white" fill="white"
+                                        d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" />
+                                </svg>
+                                </a>
                             </li>
                             <li class="ftco-animate">
                                 <a href="#"><span class="icon-facebook"></span></a>
                             </li>
                             <li class="ftco-animate">
-                                <a href="#"><span class="icon-instagram"></span></a>
+                                <a href="https://instagram.com/vujade_edu"><span class="icon-instagram"></span></a>
                             </li>
                         </ul>
                     </div>
