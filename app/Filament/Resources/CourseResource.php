@@ -63,7 +63,7 @@ class CourseResource extends Resource
                             $set('slug', Str::slug($state['en'] . '-' . Str::random(6)));
                         }),
                     TranslatableContainer::make(
-                        Forms\Components\TextInput::make('content')
+                        Forms\Components\Textarea::make('content')
                             ->maxLength(255)
                             ->required()
                     ),
