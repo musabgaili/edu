@@ -1,7 +1,7 @@
 @extends('main.layout')
 
 @section('content')
-    <section class="hero-wrap hero-wrap-2" style="background-image: url({{asset("assets/images/bg_1.jpg")}});">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url({{ asset('assets/images/bg_1.jpg') }});">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -35,7 +35,7 @@
                 <div class="col-md-4 d-flex">
                     <div class="bg-light align-self-stretch box p-4 text-center">
                         <h3 class="mb-4">{{ __('Email') }}</h3>
-                        <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                        <p><a href="mailto:info@vujadesa.com">info@vujadesa.com</a></p>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row d-flex align-items-stretch no-gutters align-items-center justify-content-center">
                 <div class="col-md-8 p-4 p-md-5 order-md-last bg-light">
-                    <form action="{{ route('courses.apply.save',['course'=> $course]) }}" method="POST">
+                    <form action="{{ route('courses.apply.save', ['course' => $course]) }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <input type="text" required name="name" class="form-control"
@@ -63,13 +63,16 @@
                         </div>
                         <div class="form-group">
 
-                            <select name="type" id="" class="form-control">
-                                <option value="student"> {{__("Student")}}</option>
-                                <option value="parent"> {{__("Parent")}}</option>
-                                <option value="manager"> {{__("Manager")}}</option>
+                            <select name="type" id="type" class="form-control">
+                                <option value="student"> {{ __('Student') }}</option>
+                                <option value="parent"> {{ __('Parent') }}</option>
+                                <option value="manager"> {{ __('Manager') }}</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="parent-message">
+                            {{-- <small id="parent-message" style="visibility: hidden;">
+                                {{ __('Please Add Student name and agen in below message filed') }}
+                            </small> --}}
                             <textarea required name="message" id="" cols="30" rows="7" class="form-control"
                                 placeholder="{{ __('Message') }}"></textarea>
                         </div>
@@ -79,7 +82,28 @@
                         </div>
                     </form>
                 </div>
-            
+
+
+                <script>
+                    var activities = document.getElementById("type");
+
+                    activities.addEventListener("change", function() {
+                        if (activities.value == "parent") {
+                            // addActivityItem();
+                            // alert();
+                            document.getElementById('parent-message')
+                            .innerHTML =  `<small id="parent-message">
+                                {{ __('Please Add Student name and age in below message filed') }}
+                            </small>` + document.getElementById('parent-message')
+                            .innerHTML
+                        }
+                    });
+
+                    // function type() {
+                    //     let t =
+                    // }
+                </script>
+
             </div>
         </div>
     </section>

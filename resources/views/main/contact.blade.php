@@ -35,7 +35,7 @@
                 <div class="col-md-4 d-flex">
                     <div class="bg-light align-self-stretch box p-4 text-center">
                         <h3 class="mb-4">{{ __('Email') }}</h3>
-                        <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                        <p><a href="mailto:info@vujadesa.com">info@vujadesa.com</a></p>
                     </div>
                 </div>
 
