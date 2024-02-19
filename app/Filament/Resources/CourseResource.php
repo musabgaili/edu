@@ -64,12 +64,12 @@ class CourseResource extends Resource
                         }),
                     TranslatableContainer::make(
                         Forms\Components\Textarea::make('content')
-                            ->maxLength(400)
+                            ->maxLength(500)
                             ->required()
                     ),
                     TranslatableContainer::make(
                         Forms\Components\TextInput::make('agenda')
-                            ->maxLength(400)
+                            ->maxLength(500)
                             ->required()
                     ),
                 ])->columnSpan(1),
