@@ -34,5 +34,14 @@
     "View More": "عـرض المزيد",
     "Parent": "ولي امر",
     "Manager": "اداري",
-    "Please Add Student name and agen in below message filed":"Please Add Student name and age in below message filed"
+    "Please Add Student details in the below message filed": "Please Add Student details in the below message filed",
+    "Please Add": "الرجاء اضافة",
+    "Student Name": "اسم الطالب",
+    "Student Age": "عمر الطالب",
+    "Please Add Your Age": "الرجاء اضافة عمرك",
+    "Send": "إرسـال",
+    "Message":"رسالتك",
+    "Phone": "رقم الهاتف",
+    "Your Name": "الاسم",
+    "Email": "الايميل"
 }

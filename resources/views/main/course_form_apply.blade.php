@@ -61,15 +61,29 @@
                             <input type="phone" required name="phone" class="form-control"
                                 placeholder="{{ __('Phone') }}">
                         </div>
-                        <div class="form-group">
-
+                        <div class="form-group" style="margin-bottom: 0rem;">
+                            
                             <select name="type" id="type" class="form-control">
+                                <option value="manager"> {{ __('Manager') }}</option>
                                 <option value="student"> {{ __('Student') }}</option>
                                 <option value="parent"> {{ __('Parent') }}</option>
-                                <option value="manager"> {{ __('Manager') }}</option>
                             </select>
                         </div>
-                        <div class="form-group" id="parent-message">
+                        <div class="form-group">
+                            <div id="parent-message">
+                                <small id="parent" hidden>
+                                    {{ __('Please Add Student details in the below message filed') }}
+                                    <br style="display: block; content: ''; margin: -4;">
+                                    {{ __('Student Name') }}
+                                    <br style="display: block; content: ''; margin: -4;">
+                                    {{ __('Student Age') }}
+                                </small>
+                                {{-- Student --}}
+                                <small id="student" hidden>
+                                    {{ __('Please Add Your Age') }}
+
+                                </small>
+                            </div>
                             {{-- <small id="parent-message" style="visibility: hidden;">
                                 {{ __('Please Add Student name and agen in below message filed') }}
                             </small> --}}
@@ -77,7 +91,7 @@
                                 placeholder="{{ __('Message') }}"></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary py-3 px-5" type="submit"> {{ __('Send Us A Message') }}
+                            <button class="btn btn-primary py-3 px-5" type="submit"> {{ __("Send") }}
                             </button>
                         </div>
                     </form>
@@ -88,20 +102,21 @@
                     var activities = document.getElementById("type");
 
                     activities.addEventListener("change", function() {
+                        var parent_message = document.getElementById('parent-message').innerHTML
                         if (activities.value == "parent") {
-                            // addActivityItem();
-                            // alert();
-                            document.getElementById('parent-message')
-                            .innerHTML =  `<small id="parent-message">
-                                {{ __('Please Add Student name and age in below message filed') }}
-                            </small>` + document.getElementById('parent-message')
-                            .innerHTML
+                            document.getElementById('parent').hidden = false
+                            document.getElementById('student').hidden = true
+                        }
+                        if (activities.value == "student") {
+                            document.getElementById('parent').hidden = true
+                            document.getElementById('student').hidden = false
+                        }
+                        if (activities.value == "manager") {
+                            // console.log('Else');
+                            document.getElementById('parent').hidden = true
+                            document.getElementById('student').hidden = true
                         }
                     });
-
-                    // function type() {
-                    //     let t =
-                    // }
                 </script>
 
             </div>
