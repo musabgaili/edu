@@ -41,7 +41,9 @@
                             </p>
                             <h3><a href="#">{{ $course->name }}</a></h3>
                             <p class="courses-p">
-                                {{ $course->content }}
+                                {{-- {{ $course->content }} --}}
+                                {!! Str::inlineMarkdown($course->content) !!}
+
                             </p>
                             <p>
                                 <a href="{{ route('courses.apply', ['course' => $course->slug]) }}"

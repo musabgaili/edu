@@ -221,7 +221,7 @@ Our instructors are not just educators; they are passionate individuals dedicate
                             </p>
                             <h3><a href="#">{{ $course->name }}</a></h3>
                             <p class="courses-p">
-                                {{ $course->content }}
+                                {!! Str::inlineMarkdown($course->content) !!}
                             </p>
                             <p>
                                 <a
