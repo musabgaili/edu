@@ -40,7 +40,7 @@
                                     {{ __($course->duration_type) }}</span>
                             </p>
                             <h3><a href="#">{{ $course->name }}</a></h3>
-                            <p class="courses-p">
+                            <p class="courses-p" dir="rtl">
                                 {{-- {{ $course->content }} --}}
                                 {!! Str::inlineMarkdown($course->content) !!}
 

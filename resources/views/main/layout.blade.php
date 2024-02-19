@@ -83,9 +83,9 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">{{ __('Staff') }}</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="{{ route('blog') }}" class="nav-link">{{ __('Blog') }}</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a href="{{ route('contact') }}" class="nav-link">{{ __('Contact') }}</a>
                     </li>

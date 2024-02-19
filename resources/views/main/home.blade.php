@@ -213,14 +213,14 @@ Our instructors are not just educators; they are passionate individuals dedicate
                     <div class="col-md-6 course ftco-animate">
                         <div class="img" style="background-image: url({{ asset('storage/' . $course->thumbnail) }})">
                         </div>
-                        <div class="text pt-4">
+                        <div class="text pt-4" >
                             <p class="meta d-flex">
                                 {{-- <span><i class="icon-table mr-2"></i>{{$course->thumbnail}}</span> --}}
                                 <span><i class="icon-calendar mr-2"></i>{{ $course->duration }}
                                     {{ __($course->duration_type) }}</span>
                             </p>
                             <h3><a href="#">{{ $course->name }}</a></h3>
-                            <p class="courses-p">
+                            <p class="courses-p" dir="rtl">
                                 {!! Str::inlineMarkdown($course->content) !!}
                             </p>
                             <p>
