@@ -72,7 +72,7 @@
                         <div class="form-group">
                             <div id="parent-message">
                                 <small id="parent" hidden>
-                                    {{ __('Please Add Student details in the below message filed') }}
+                                    {{ __('Please Add Student details in the below message field') }}
                                     <br style="display: block; content: ''; margin: -4;">
                                     {{ __('Student Name') }}
                                     <br style="display: block; content: ''; margin: -4;">
@@ -80,13 +80,10 @@
                                 </small>
                                 {{-- Student --}}
                                 <small id="student" hidden>
-                                    {{ __('Please Add Your Age') }}
+                                    {{ __('Please Add Your Age in the below message field') }}
 
                                 </small>
                             </div>
-                            {{-- <small id="parent-message" style="visibility: hidden;">
-                                {{ __('Please Add Student name and agen in below message filed') }}
-                            </small> --}}
                             <textarea required name="message" id="" cols="30" rows="7" class="form-control"
                                 placeholder="{{ __('Message') }}"></textarea>
                         </div>
