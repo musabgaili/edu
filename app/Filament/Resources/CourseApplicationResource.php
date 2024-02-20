@@ -8,6 +8,7 @@ use App\Models\Course;
 use App\Models\CourseApplication;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
@@ -39,7 +40,8 @@ class CourseApplicationResource extends Resource
 
                 Select::make('course_id') ->label('Course')->options(
                     Course::all()->pluck('name', 'id',),
-                )->required()
+                )->required(),
+                Textarea::make('message')
 
             ]);
     }
