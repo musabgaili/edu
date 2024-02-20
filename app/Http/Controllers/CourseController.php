@@ -32,6 +32,7 @@ class CourseController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'type' => $request->type,
+            'message'=> $request->message,
         ]);
         return redirect()->back()->with('success', '');
     }
